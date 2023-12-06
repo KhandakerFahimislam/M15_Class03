@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="M15_Class03.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:M15_Class03"
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutHeader>
+        <HorizontalStackLayout HeightRequest="50" Padding="10,5, 10, 5"  BackgroundColor="LightBlue" VerticalOptions="FillAndExpand">
+            <Image Source="app.png" Margin="10" />
+            <Label VerticalTextAlignment="Center" Text="App" />
+        </HorizontalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        Title="Home"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+    Title="Product"
+           Icon="products.png"
+    ContentTemplate="{DataTemplate local:Products}"
+    Route="Products" />
+
+</Shell>
